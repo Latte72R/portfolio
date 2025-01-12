@@ -25,17 +25,9 @@ const Header = (props: HeaderProps) => {
                     if (!props.isOpen) {
                         isInside = (e.clientX >= bRect.left && e.clientX <= bRect.right && e.clientY >= bRect.top && e.clientY <= bRect.bottom);
                     } else {
-                        isInside = ((
-                            e.clientX >= bRect.left &&
-                            e.clientX <= bRect.right &&
-                            e.clientY >= bRect.top &&
-                            e.clientY <= bRect.bottom
-                        ) || (
-                            e.clientX >= sRect.left &&
-                            e.clientX <= sRect.right &&
-                            e.clientY >= sRect.top &&
-                            e.clientY <= sRect.bottom
-                        ));
+                        isInside =
+                            (e.clientX >= bRect.left && e.clientX <= bRect.right && e.clientY >= bRect.top && e.clientY <= bRect.bottom) ||
+                            (e.clientX >= sRect.left && e.clientX <= sRect.right && e.clientY >= sRect.top && e.clientY <= sRect.bottom);
                     }
                 } else {
                     if (!props.isOpen) {
@@ -44,7 +36,9 @@ const Header = (props: HeaderProps) => {
                         if (e.clientY >= bRect.top && e.clientY <= sRect.top) {
                             const left = sRect.left + (bRect.left - sRect.left) * (sRect.top - e.clientY) / (sRect.top - bRect.top);
                             const right = bRect.right + (sRect.right - bRect.left) * (e.clientY - bRect.top) / (sRect.top - bRect.top);
-                            isInside = (e.clientX >= left && e.clientX <= right);
+                            isInside =
+                                (e.clientX >= left && e.clientX <= right) ||
+                                (e.clientX >= bRect.left && e.clientX <= bRect.right && e.clientY >= bRect.top && e.clientY <= bRect.bottom);
                         } else if (e.clientY >= sRect.top && e.clientY <= sRect.bottom) {
                             isInside = (e.clientX >= sRect.left && e.clientX <= sRect.right);
                         }
@@ -66,7 +60,7 @@ const Header = (props: HeaderProps) => {
                 <path className="border2 border"
                     d="M454.5,219.9H44.5c-18.8,0-34.1,15.3-34.1,34.1c0,18.9,15.3,34.2,34.1,34.2h409.9c18.9,0,34.2-15.3,34.2-34.2 C488.7,235.2,473.3,219.9,454.5,219.9z" />
                 <path className="border3 border"
-                    d="M454.5,356.7H44.5c-18.8,0-34.1,15.2-34.1,34.1c0,18.8,15.3,34.1,34.1,34.1h409.9c18.9,0,34.2-15.3,34.2-34.1 S473.3,356.7,454.5,356.7z"/>
+                    d="M454.5,356.7H44.5c-18.8,0-34.1,15.2-34.1,34.1c0,18.8,15.3,34.1,34.1,34.1h409.9c18.9,0,34.2-15.3,34.2-34.1 S473.3,356.7,454.5,356.7z" />
             </svg>
         </div>
     );

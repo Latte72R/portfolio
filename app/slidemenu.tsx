@@ -23,9 +23,9 @@ const SlideMenu = (props: SlideMenuProps) => {
             <p><Link href="/works" className="menu-link">Works</Link></p>
             <p><Link href="/blog" className="menu-link">Blog</Link></p>
             <div className="divider"></div>
-            <p><Link href="https://turtle.latte72.net" className="menu-link">TurtleGraphics</Link></p>
-            <p><Link href="https://shilitori.latte72.net" className="menu-link">Shilitori</Link></p>
-            <p><Link href="https://easyturtle.latte72.net" className="menu-link">EasyTurtle</Link></p>
+            <p><Link href="https://turtle.latte72.net" className="menu-link" target="_blank">TurtleGraphics</Link></p>
+            <p><Link href="https://shilitori.latte72.net" className="menu-link" target="_blank">Shilitori</Link></p>
+            <p><Link href="https://easyturtle.latte72.net" className="menu-link" target="_blank">EasyTurtle</Link></p>
             <div className="divider"></div>
             <div>
                 <div className="sns-menu-span">
