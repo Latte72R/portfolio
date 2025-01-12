@@ -1,6 +1,6 @@
 'use server';
-import { JSDOM } from "jsdom";
 import ky from "ky";
+import { JSDOM } from "jsdom";
 
 const jsdom = new JSDOM();
 
@@ -24,7 +24,21 @@ export interface ArticleData {
     tags: string[];
     label: string;
     date: string;
-    image_url: string;
+}
+
+export const getImgUrl = async (postUrl: string) => {
+    const res = await ky.get(postUrl);
+    const text = await res.text();
+    const el = new jsdom.window.DOMParser().parseFromString(text, "text/html");
+    const headEls = el.head.children;
+    for (let i = 0; i < headEls.length; i++) {
+        const prop = headEls[i].getAttribute("property");
+        if (!prop) continue;
+        if (prop === "og:image") {
+            return headEls[i].getAttribute("content") || "";
+        }
+    }
+    return "";
 }
 
 export const getAllPosts = async (): Promise<ArticleData[]> => {
@@ -34,7 +48,8 @@ export const getAllPosts = async (): Promise<ArticleData[]> => {
     });
     const data: Post[] = await res.json();
     const publicPosts = data.filter((post) => !post.private);
-    
+
+    /*
     for (let i = 0; i < publicPosts.length; i++) {
         const res = await ky.get(publicPosts[i].url);
         const text = await res.text();
@@ -48,6 +63,7 @@ export const getAllPosts = async (): Promise<ArticleData[]> => {
             }
         });
     }
+    */
 
     return publicPosts.map((post: Post) => ({
         title: post.title,
@@ -55,7 +71,6 @@ export const getAllPosts = async (): Promise<ArticleData[]> => {
         tags: post.tags.map((tag: Tag) => tag.name),
         label: 'Qiita',
         date: post.created_at,
-        image_url: post.image_url,
     }));
 };
 
