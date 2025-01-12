@@ -41,7 +41,7 @@
     color: #E0E0E0;
     border-radius: 0.6em;
     padding: 1em 2em 2em 2em;
-    box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0.2em 0.4em rgba(10, 10, 10, 0.8);
     right: -28em;
     opacity: 0;
     transition: 0.3s all ease;
@@ -73,7 +73,7 @@
     left: 0;
     background-color: rgba(30, 30, 30, 0.9);
     border-bottom: 0.1em solid rgba(20, 20, 20, 0.8);
-    box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0.2em 0.4em rgba(10, 10, 10, 0.8);
     position: fixed;
 }
 
