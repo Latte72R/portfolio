@@ -1,0 +1,98 @@
+
+.qiita-article {
+    border-radius: 0.6em;
+    background-color: rgb(30, 30, 40);
+    transition: all 0.3s 0s ease;
+    cursor: pointer;
+}
+
+.qiita-article:hover {
+    background-color: rgb(50, 50, 60);
+}
+
+.qiita-image {
+    border-radius: 0.4em;
+}
+
+.qiita-tag-container {
+    margin-bottom: 0em;
+}
+
+.qiita-tag {
+    display:inline-block;
+    background-color: rgb(70, 70, 80);
+    margin: 0.2em 0.2em;
+    padding: 0.1em 0.4em;
+    border-radius: 0.2em;
+}
+
+.qiita-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.6em;
+    background-color: rgb(30, 30, 40);
+}
+
+.qiita-link {
+    text-decoration: none;
+    color: #E0E0E0;
+}
+
+.qiita-link:hover {
+    color: #E0E0E0;
+}
+
+.loading-anime {
+    border: 0.4em solid #E0E0E0;
+    border-radius: 50%;
+    width: 6em;
+    height: 6em;
+    margin: 1em 0em;
+    border-top: 0.4em solid #3498db;
+    animation: spin 1.6s linear infinite;
+}
+
+@keyframes spin{
+    0%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 1023px) {
+    .qiita-article {
+        padding: 1em 1em;
+    }
+
+    .qiita-article h3 {
+        font-size: 1.2em;
+    }
+
+    .qiita-img-container {
+        margin: 0em;
+    }
+
+    .qiita-loading {
+        padding: 1em 1em;
+    }
+}
+
+@media (min-width: 1024px) {
+    .qiita-article {
+        margin: 1em 3em;
+        padding: 2em 4em;
+    }
+
+    .qiita-img-container {
+        margin: 0em;
+    }
+
+    .qiita-loading {
+        margin: 1em 3em;
+        padding: 2em 4em;
+    }
+}

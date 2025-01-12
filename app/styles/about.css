@@ -1,0 +1,53 @@
+
+#github-logo-white {
+    width: 1.4em;
+    height: 1.4em;
+    display: inline-block;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+#x-logo-white {
+    width: 1.2em;
+    height: 1.2em;
+    padding: 0.1em 0em;
+    display: inline-block;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+#qiita-icon-white {
+    width: 1.4em;
+    height: 1.4em;
+    display: inline-block;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.sns-link-span {
+    display: inline-block;
+}
+
+.sns-link {
+    display: flex;
+    gap: 0.2em;
+    font-weight: bold;
+    color: #E0E0E0;
+    text-decoration: none;
+    padding: 0.3em 0.5em;
+    line-height: 1.8em;
+    margin-right: 0.4em;
+    border-radius: 0.3em;
+    transition: all 0.3s 0s ease;
+}
+
+.sns-link:hover {
+    display: flex;
+    gap: 0.2em;
+    font-weight: bold;
+    background-color: #18282a;
+    color: #00c0f0;
+}

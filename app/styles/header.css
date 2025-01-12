@@ -1,0 +1,144 @@
+
+.hamburger-menu {
+    width: 3em;
+    height: 3em;
+    cursor: pointer;
+    right: 1em;
+    position: absolute;
+    padding: 0.6em;
+}
+
+.hamburger-menu .border {
+    fill: #E0E0E0;;
+    transition: 0.2s all ease;
+    transform-origin: 250px 250px;
+}
+
+.hamburger-menu.open .border {
+    fill: #00c0f0;
+}
+
+.hamburger-menu.open .border1 {
+    transform: translate(-102px, 102px) rotate(45deg);
+}
+
+.hamburger-menu.open .border2 {
+    opacity: 0;
+}
+  
+.hamburger-menu.open .border3 {
+    transform: translate(-102px, -102px) rotate(-45deg);
+}
+
+.slide-menu {
+    position: fixed;
+    display: block;
+    top: 5em;
+    margin-top: 1em;
+    width: 24em;
+    background-color: rgba(30, 30, 30, 0.9);
+    border: 0.1em solid rgba(0, 0, 0, 0.8);
+    color: #E0E0E0;
+    border-radius: 0.6em;
+    padding: 1em 2em 2em 2em;
+    box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.8);
+    right: -28em;
+    opacity: 0;
+    transition: 0.3s all ease;
+    z-index: 999;
+}
+  
+.slide-menu.open {
+    right: 0.4em;
+    opacity: 1;
+}
+
+.menu-link {
+    font-size: 1.8em;
+    line-height: 1.4;
+    padding: 0.2em 0.2em;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.header {
+    height: 3.6em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1em 0em;
+    margin: 0em;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    background-color: rgba(30, 30, 30, 0.9);
+    box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+    position: fixed;
+}
+
+.header-title {
+    display: flex;
+    text-decoration: none;
+    font-size: 2.25em;
+    font-style: italic;
+    color: #dfdfdf;
+    align-items: center;
+    margin-left: 0.8em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.header-title:hover {
+    color: #dfdfdf;
+}
+
+#github-menu {
+    width: 1.4em;
+    height: 1.4em;
+    display: inline-block;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+#x-menu {
+    width: 1.2em;
+    height: 1.2em;
+    padding: 0.1em 0em;
+    display: inline-block;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+#qiita-menu {
+    width: 1.4em;
+    height: 1.4em;
+    display: inline-block;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.sns-menu-span {
+    display: inline-block;
+}
+
+.sns-menu {
+    display: flex;
+    font-weight: bold;
+    color: #E0E0E0;
+    text-decoration: none;
+    padding: 0.3em 0.5em;
+    line-height: 1.8em;
+    margin-right: 0.6em;
+    border-radius: 0.3em;
+    transition: all 0.3s 0s ease;
+    cursor: pointer;
+}
+
+.sns-menu:hover {
+    display: flex;
+    font-weight: bold;
+    background-color: #006e89;
+}
