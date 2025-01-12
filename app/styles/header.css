@@ -142,3 +142,11 @@
     font-weight: bold;
     background-color: #006e89;
 }
+
+.divider {
+    height: 0.2em;
+    width: auto;
+    background-color: #555;
+    margin: 1em 0em;
+    border-radius: 0.1em;
+}

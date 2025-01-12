@@ -22,6 +22,11 @@ const SlideMenu = (props: SlideMenuProps) => {
             <p><Link href="/about" className="menu-link">About</Link></p>
             <p><Link href="/works" className="menu-link">Works</Link></p>
             <p><Link href="/blog" className="menu-link">Blog</Link></p>
+            <div className="divider"></div>
+            <p><Link href="https://turtle.latte72.net" className="menu-link">TurtleGraphics</Link></p>
+            <p><Link href="https://shilitori.latte72.net" className="menu-link">Shilitori</Link></p>
+            <p><Link href="https://easyturtle.latte72.net" className="menu-link">EasyTurtle</Link></p>
+            <div className="divider"></div>
             <div>
                 <div className="sns-menu-span">
                     <Link href="https://github.com/Latte72R" target="_blank" legacyBehavior>
