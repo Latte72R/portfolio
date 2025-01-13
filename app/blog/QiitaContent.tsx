@@ -98,14 +98,14 @@ const QiitaContent: React.FC = () => {
     React.useEffect(() => {
         const fetchData = async () => {
             setIsLoading(true);
-            const postsRef = localStorage.getItem("postsRef");
+            const postsRef = sessionStorage.getItem("postsRef");
             if (postsRef) {
                 setPosts(JSON.parse(postsRef));
                 setIsLoading(false);
             } else {
                 try {
                     const fetchedPosts = await getAllPosts();
-                    localStorage.setItem("postsRef", JSON.stringify(fetchedPosts));
+                    sessionStorage.setItem("postsRef", JSON.stringify(fetchedPosts));
                     setPosts(fetchedPosts);
                 } catch {
                     setPosts(null);
