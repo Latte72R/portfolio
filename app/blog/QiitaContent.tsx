@@ -39,9 +39,9 @@ const Article: React.FC<{ post: ArticleData }> = ({ post }) => {
     React.useEffect(() => {
         const fetchData = async () => {
             setIsLoading(true);
-            const imgUrlsRef = sessionStorage.getItem("imgUrlsRef");
+            const imgUrlsRef = localStorage.getItem("imgUrlsRef");
             if (!imgUrlsRef) {
-                sessionStorage.setItem("imgUrlsRef", JSON.stringify({}));
+                localStorage.setItem("imgUrlsRef", JSON.stringify({}));
             }
             if (Object.keys(JSON.parse(imgUrlsRef || "{}")).includes(postUrl)) {
                 setUrl(JSON.parse(imgUrlsRef || "{}")[postUrl]);
@@ -51,7 +51,7 @@ const Article: React.FC<{ post: ArticleData }> = ({ post }) => {
                     const fetchedUrl = await getImgUrl(postUrl);
                     const imgUrls = JSON.parse(imgUrlsRef || "{}");
                     imgUrls[postUrl] = fetchedUrl;
-                    sessionStorage.setItem("imgUrlsRef", JSON.stringify(imgUrls));
+                    localStorage.setItem("imgUrlsRef", JSON.stringify(imgUrls));
                     setUrl(fetchedUrl);
                 } catch {
                     setUrl(null);
@@ -98,14 +98,14 @@ const QiitaContent: React.FC = () => {
     React.useEffect(() => {
         const fetchData = async () => {
             setIsLoading(true);
-            const postsRef = sessionStorage.getItem("postsRef");
+            const postsRef = localStorage.getItem("postsRef");
             if (postsRef) {
                 setPosts(JSON.parse(postsRef));
                 setIsLoading(false);
             } else {
                 try {
                     const fetchedPosts = await getAllPosts();
-                    sessionStorage.setItem("postsRef", JSON.stringify(fetchedPosts));
+                    localStorage.setItem("postsRef", JSON.stringify(fetchedPosts));
                     setPosts(fetchedPosts);
                 } catch {
                     setPosts(null);

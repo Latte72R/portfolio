@@ -49,22 +49,6 @@ export const getAllPosts = async (): Promise<ArticleData[]> => {
     const data: Post[] = await res.json();
     const publicPosts = data.filter((post) => !post.private);
 
-    /*
-    for (let i = 0; i < publicPosts.length; i++) {
-        const res = await ky.get(publicPosts[i].url);
-        const text = await res.text();
-        const el = new jsdom.window.DOMParser().parseFromString(text, "text/html");
-        const headEls = el.head.children;
-        Array.from(headEls).map((v) => {
-            const prop = v.getAttribute("property");
-            if (!prop) return;
-            if (prop === "og:image") {
-                publicPosts[i].image_url = v.getAttribute("content") || '';
-            }
-        });
-    }
-    */
-
     return publicPosts.map((post: Post) => ({
         title: post.title,
         url: post.url,
