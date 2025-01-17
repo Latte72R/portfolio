@@ -43,7 +43,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
                 <meta name="twitter:site" content="@Latte72R" />
                 <meta name="twitter:creator" content="@Latte72R" />
                 <meta name="twitter:image" content="https://latte72.net/latte_space.png" />
-                <meta name="google-site-verification" content="0emCJYzQ7kMGpSYs0rCOwGaUoVxEN8FrIp42fC9ao0w" />
             </head>
             <body>{children}</body>
         </html >
