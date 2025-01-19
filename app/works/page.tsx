@@ -6,12 +6,12 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-import PortfolioImage from "@/public/image/portfolio.png";
-import TurtleImage from "@/public/image/turtle.png";
-import ShilitoriImage from "@/public/image/shilitori.png";
-import EasyTurtleImage from "@/public/image/easyturtle.png";
-import LsbImage from "@/public/image/lsb.png";
-import TkWidgetsImage from "@/public/image/tkwidgets.png";
+import PortfolioImage from "@/public/image/portfolio.webp";
+import TurtleImage from "@/public/image/turtle.webp";
+import ShilitoriImage from "@/public/image/shilitori.webp";
+import EasyTurtleImage from "@/public/image/easyturtle.webp";
+import LsbImage from "@/public/image/lsb.webp";
+import TkWidgetsImage from "@/public/image/tkwidgets.webp";
 
 export const metadata = {
     title: 'Works',
