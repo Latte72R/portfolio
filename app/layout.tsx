@@ -18,7 +18,7 @@ export const metadata = {
     },
     description: "Latte72's portfolio",
     alternates: {
-        canonical: "https://latte72.net",
+        canonical: "/",
     },
     openGraph: {
         title: {

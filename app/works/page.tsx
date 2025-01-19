@@ -18,6 +18,9 @@ export const metadata = {
     openGraph: {
         title: 'Works',
     },
+    alternates: {
+        canonical: '/works',
+    }
 };
 
 const WorksPage: React.FC = () => {
