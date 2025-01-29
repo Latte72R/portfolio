@@ -11,7 +11,6 @@ type RootLayoutProps = {
 export const metadata = {
     // Vercel以外のホスティングサービスを利用する場合はmetadataBaseを設定する必要がある
     metadataBase: new URL("https://latte72.net"),
-    appleWebApp: true,
     title: {
         default: "Latte72",
         template: `%s | Latte72`,
@@ -30,6 +29,12 @@ export const metadata = {
         siteName: "Latte72",
         locale: "ja_JP",
         type: "website",
+    },
+    themeColor: '#223',
+    appleWebApp: {
+        capable: true,
+        statusBarStyle: 'black-translucent',
+        title: 'Latte72',
     },
 };
 
