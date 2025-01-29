@@ -31,11 +31,7 @@ export const metadata = {
         type: "website",
     },
     themeColor: '#223',
-    appleWebApp: {
-        capable: true,
-        statusBarStyle: 'black-translucent',
-        title: 'Latte72',
-    },
+    appleWebApp: true,
 };
 
 export default function RootLayout({ children }: RootLayoutProps) {
