@@ -30,7 +30,6 @@ export const metadata = {
         locale: "ja_JP",
         type: "website",
     },
-    themeColor: '#223',
     appleWebApp: true,
 };
 
