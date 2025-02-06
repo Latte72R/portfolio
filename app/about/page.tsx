@@ -5,9 +5,9 @@ import MainContent, { Document } from '../elements';
 import React from 'react';
 import Image from 'next/image';
 
-import GitHubLogoWhite from '@/public/logos/github-mark-white.png';
-import XLogoWhite from '@/public/logos/x-logo-white.png';
-import QiitaIconWhite from '@/public/logos/qiita-white-icon.png';
+import GitHubLogoWhite from '@/public/logos/github-mark-white.webp';
+import XLogoWhite from '@/public/logos/x-logo-white.webp';
+import QiitaIconWhite from '@/public/logos/qiita-white-icon.webp';
 
 export const metadata = {
     title: 'About',

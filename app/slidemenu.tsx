@@ -6,9 +6,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import React from 'react';
 
-import GitHubLogoWhite from '@/public/logos/github-mark-white.png';
-import XLogoWhite from '@/public/logos/x-logo-white.png';
-import QiitaIconWhite from '@/public/logos/qiita-white-icon.png';
+import GitHubLogoWhite from '@/public/logos/github-mark-white.webp';
+import XLogoWhite from '@/public/logos/x-logo-white.webp';
+import QiitaIconWhite from '@/public/logos/qiita-white-icon.webp';
 
 interface SlideMenuProps {
     isOpen: boolean;

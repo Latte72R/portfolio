@@ -32,32 +32,19 @@ const ArticleBase = (props: ArticleDataPlus) => {
 };
 
 const Article: React.FC<{ post: ArticleData }> = ({ post }) => {
-    const [imageUrl, setUrl] = React.useState<string | null>(null);
+    const [imageUrl, setUrl] = React.useState<string | null>();
     const [isLoading, setIsLoading] = React.useState(true);
     const postUrl = post.url;
 
     React.useEffect(() => {
         const fetchData = async () => {
             setIsLoading(true);
-            const imgUrlsRef = localStorage.getItem("imgUrlsRef");
-            if (!imgUrlsRef) {
-                localStorage.setItem("imgUrlsRef", JSON.stringify({}));
-            }
-            if (Object.keys(JSON.parse(imgUrlsRef || "{}")).includes(postUrl)) {
-                setUrl(JSON.parse(imgUrlsRef || "{}")[postUrl]);
+            try {
+                setUrl(await getImgUrl(postUrl));
+            } catch {
+                setUrl(null);
+            } finally {
                 setIsLoading(false);
-            } else {
-                try {
-                    const fetchedUrl = await getImgUrl(postUrl);
-                    const imgUrls = JSON.parse(imgUrlsRef || "{}");
-                    imgUrls[postUrl] = fetchedUrl;
-                    localStorage.setItem("imgUrlsRef", JSON.stringify(imgUrls));
-                    setUrl(fetchedUrl);
-                } catch {
-                    setUrl(null);
-                } finally {
-                    setIsLoading(false);
-                }
             }
         };
         fetchData();
@@ -67,7 +54,6 @@ const Article: React.FC<{ post: ArticleData }> = ({ post }) => {
         return (
             <ArticleBase post={post}>
                 <div className="qiita-img-loading">
-
                     <div className="loading-anime"></div>
                     <h3>Now loading...</h3>
                 </div>
@@ -85,7 +71,7 @@ const Article: React.FC<{ post: ArticleData }> = ({ post }) => {
     } else {
         return (
             <ArticleBase post={post}>
-                <Image className="qiita-image" src={imageUrl || ""} alt="thumbnail" width={1200} height={630} layout="responsive" />
+                <Image className="qiita-image" src={imageUrl} alt="thumbnail" width={1200} height={630} layout="responsive" />
             </ArticleBase>
         );
     };

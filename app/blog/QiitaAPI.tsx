@@ -1,9 +1,7 @@
 'use server';
 
-import ky from "ky";
-import { JSDOM } from "jsdom";
-
-const jsdom = new JSDOM();
+import axios from "axios";
+import { getLinkPreview } from "link-preview-js";
 
 interface Tag {
     name: string;
@@ -28,34 +26,35 @@ export interface ArticleData {
 }
 
 export const getImgUrl = async (postUrl: string) => {
-    const res = await ky.get(postUrl);
-    const text = await res.text();
-    const el = new jsdom.window.DOMParser().parseFromString(text, "text/html");
-    const headEls = el.head.children;
-    for (let i = 0; i < headEls.length; i++) {
-        const prop = headEls[i].getAttribute("property");
-        if (!prop) continue;
-        if (prop === "og:image") {
-            return headEls[i].getAttribute("content") || "";
-        }
+    try {
+        const data = await getLinkPreview(postUrl);
+        return (data as { images: string[] }).images[0];
+    } catch (error) {
+        console.error(`Failed to fetch og:image from ${postUrl}:`, error);
+        return "";
     }
-    return "";
 }
 
 export const getAllPosts = async (): Promise<ArticleData[]> => {
     const apiUrl = `${process.env.QIITA_API_URL}?per_page=10`;
-    const res = await ky.get(apiUrl, {
-        headers: { Authorization: `Bearer ${process.env.QIITA_API_KEY}` },
-    });
-    const data: Post[] = await res.json();
-    const publicPosts = data.filter((post) => !post.private);
 
-    return publicPosts.map((post: Post) => ({
-        title: post.title,
-        url: post.url,
-        tags: post.tags.map((tag: Tag) => tag.name),
-        label: 'Qiita',
-        date: post.created_at,
-    }));
+    try {
+        const res = await axios.get(apiUrl, {
+            headers: { Authorization: `Bearer ${process.env.QIITA_API_KEY}` },
+        });
+
+        const data: Post[] = res.data;
+        const publicPosts = data.filter((post) => !post.private);
+
+        return publicPosts.map((post: Post) => ({
+            title: post.title,
+            url: post.url,
+            tags: post.tags.map((tag: Tag) => tag.name),
+            label: 'Qiita',
+            date: post.created_at,
+        }));
+    } catch (error) {
+        console.error("Failed to fetch posts:", error);
+        return [];
+    }
 };
-
