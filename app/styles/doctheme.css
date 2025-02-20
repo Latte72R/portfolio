@@ -79,7 +79,7 @@ h3 {
 .not-found-h1 {
     font-size: 3em;
     color: #E0E0E0;
-    margin: 1.6em;
+    margin: 1.6em auto;
 }
 
 .page-top {
@@ -145,7 +145,7 @@ h3 {
     height: 1.8em;
     width: 5em;
     border-radius: 0.3em;
-    margin: 0.2em 0.6em;
+    margin: 0.25em 0.6em;
     cursor: pointer;
     border: 0.05em solid #E0E0E0;
     transition: all 0.3s 0s ease;
@@ -176,13 +176,13 @@ h3 {
       transform: rotate(0deg);
     }
     60.75%{
-      transform: rotate(10deg);
+      transform: rotate(6deg);
     }
     62.25%{
-      transform: rotate(-10deg);
+      transform: rotate(-6deg);
     }
     63.75%{
-      transform: rotate(10deg);
+      transform: rotate(6deg);
     }
     64.5%{
       transform: rotate(0deg);
@@ -200,13 +200,13 @@ h3 {
       transform: rotate(0deg);
     }
     75.75%{
-      transform: rotate(-10deg);
+      transform: rotate(-6deg);
     }
     77.25%{
-      transform: rotate(10deg);
+      transform: rotate(6deg);
     }
     78.75%{
-      transform: rotate(-10deg);
+      transform: rotate(-6deg);
     }
     79.5%{
       transform: rotate(0deg);
@@ -224,13 +224,13 @@ h3 {
       transform: rotate(0deg);
     }
     90.75%{
-      transform: rotate(10deg);
+      transform: rotate(6deg);
     }
     92.25%{
-      transform: rotate(-10deg);
+      transform: rotate(-6deg);
     }
     93.75%{
-      transform: rotate(10deg);
+      transform: rotate(6deg);
     }
     94.5%{
       transform: rotate(0deg);
@@ -260,8 +260,7 @@ h3 {
     }
 
     .not-found {
-        margin-top: 10em;
-        margin-bottom: 11em;
+        margin: 7em auto;
     }
 
     .link-button-div {
@@ -295,8 +294,9 @@ h3 {
     }
 
     .document {
-        margin: 2em 10em;
-        padding: 2em;
+        width: 60em;
+        margin: 2em auto;
+        padding: 2em 4em;
     }
 
     .blank {

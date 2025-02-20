@@ -1,70 +1,69 @@
 
 .works-image {
-    margin-left: 1em;
-    margin-bottom: 1em;
     border-radius: 0.4em;
+    max-width: 100%;
 }
 
 @media (max-width: 1023px) {
     #image-portfolio {
-        width: 90%;
-        height: auto;
+        height: 12em;
+        width: auto;
     }
 
     #image-turtle {
-        width: 90%;
-        height: auto;
+        height: 14em;
+        width: auto;
     }
-
+    
     #image-shilitori {
-        width: 80%;
-        height: auto;
+        height: 14em;
+        width: auto;
     }
-
+    
     #image-easyturtle {
-        width: 90%;
-        height: auto;
+        height: 12em;
+        width: auto;
     }
-
+    
     #image-lsb {
-        width: 85%;
-        height: auto;
+        height: 14em;
+        width: auto;
     }
-
+    
     #image-tkwidgets {
-        width: 70%;
-        height: auto;
+        height: 12em;
+        width: auto;
     }
 }
 
 @media (min-width: 1024px) {
     #image-portfolio {
-        width: 70%;
-        height: auto;
+        height: 26em;
+        width: auto;
     }
 
     #image-turtle {
-        width: 55%;
-        height: auto;
+        height: 28em;
+        width: auto;
     }
     
     #image-shilitori {
-        width: 45%;
-        height: auto;
+        height: 28em;
+        width: auto;
     }
     
     #image-easyturtle {
-        width: 55%;
-        height: auto;
+        height: 26em;
+        width: auto;
     }
     
     #image-lsb {
-        width: 50%;
-        height: auto;
+        height: 28em;
+        width: auto;
     }
     
     #image-tkwidgets {
-        width: 30%;
-        height: auto;
+        height: 24em;
+        width: auto;
     }
 }
