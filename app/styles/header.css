@@ -9,7 +9,7 @@
 }
 
 .hamburger-menu .border {
-    fill: #E0E0E0;;
+    fill: #E0E0E0;
     transition: 0.2s all ease;
     transform-origin: 250px 250px;
 }

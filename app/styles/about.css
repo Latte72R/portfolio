@@ -27,6 +27,15 @@
     margin: auto;
 }
 
+#mail-address {
+    width: auto;
+    height: 4.2em;
+    display: inline-block;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
 .sns-link-span {
     display: inline-block;
 }

@@ -63,7 +63,7 @@ const Document = (props: DocumentProps) => {
 const Footer = () => {
     return (
         <div className="footer">
-            <p>&copy; 2024 Latte72. All rights reserved.</p>
+            <p>&copy; 2025 Latte72. All rights reserved.</p>
         </div>
     );
 }

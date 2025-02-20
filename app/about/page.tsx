@@ -9,6 +9,8 @@ import GitHubLogoWhite from '@/public/logos/github-mark-white.webp';
 import XLogoWhite from '@/public/logos/x-logo-white.webp';
 import QiitaIconWhite from '@/public/logos/qiita-white-icon.webp';
 
+import MailAddressImage from '@/public/mail-adress.webp';
+
 export const metadata = {
     title: 'About',
     openGraph: {
@@ -27,7 +29,7 @@ const HomePage: React.FC = () => {
                     <h2>About Me</h2>
                     <h3>はじめまして、Latte72 です。</h3>
                     <p>主に Python、C/C++、JavaScript を使って開発しています。</p>
-                    <p>最近は自作OSや自作コンパイラの開発と Deep Learning に興味があります。</p>
+                    <p>最近は低レイヤー開発（特に自作OSや自作コンパイラの開発）に興味があります。</p>
                     <h3>所属</h3>
                     <p>慶應義塾大学理工学部</p>
                     <p>慶應義塾大学公認サークル Computer Society</p>
@@ -62,6 +64,13 @@ const HomePage: React.FC = () => {
                 <p>低レイヤー / 自作OS / 自作ブラウザ</p>
                 <p>LLVM / MLIR / 自作言語 / 自作コンパイラ</p>
                 <p>自然言語処理 / Transformer / Deep Learning / 画像認識</p>
+            </Document>
+            <Document>
+                <h2>Contacts</h2>
+                <p>メールでのお問い合わせは以下のアドレスまでお願いします。</p>
+                <p><Image id="mail-address" src={MailAddressImage} alt="address" priority /></p>
+                <p>※ 特定電子メールの送付はお断りします。</p>
+                <p>X (@Latte72R) の DirectMessage への連絡も受け付けています。</p>
             </Document>
         </MainContent>
     );

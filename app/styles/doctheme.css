@@ -46,6 +46,7 @@ h2 {
 
 body a {
     color: #1096d9;
+    transition: all 0.3s 0s ease;
 }
 
 body a:hover {
@@ -87,6 +88,38 @@ h3 {
 
 .latte-image {
     border-radius: 50%;
+    border: 0.2em solid #E0E0E0;
+    animation: spin-img 5s linear infinite;
+}
+
+@keyframes spin-img{
+    0%{
+      transform: rotate(0deg);
+    }
+    84%{
+      transform: rotate(0deg);
+    }
+    86%{
+      transform: rotate(30deg);
+    }
+    88%{
+      transform: rotate(70deg);
+    }
+    90%{
+      transform: rotate(120deg);
+    }
+    94%{
+      transform: rotate(240deg);
+    }
+    96%{
+      transform: rotate(290deg);
+    }
+    98%{
+      transform: rotate(330deg);
+    }
+    100%{
+      transform: rotate(360deg);
+    }
 }
 
 .title-top {
