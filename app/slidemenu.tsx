@@ -29,22 +29,22 @@ const SlideMenu = (props: SlideMenuProps) => {
             <div className="divider"></div>
             <div>
                 <div className="sns-menu-span">
-                    <Link href="https://github.com/Latte72R" target="_blank" legacyBehavior>
-                        <a className="sns-menu">
+                    <Link href="https://github.com/Latte72R" legacyBehavior>
+                        <a className="sns-menu" target="_blank">
                             <Image id="github-menu" src={GitHubLogoWhite} alt="G" priority={false} />
                         </a>
                     </Link>
                 </div>
                 <div className="sns-menu-span">
-                    <Link href="https://x.com/Latte72R" target="_blank" legacyBehavior>
-                        <a className="sns-menu">
+                    <Link href="https://x.com/Latte72R" legacyBehavior>
+                        <a className="sns-menu" target="_blank">
                             <Image id="x-menu" src={XLogoWhite} alt="X" priority={false} />
                         </a>
                     </Link>
                 </div>
                 <div className="sns-menu-span">
-                    <Link href="https://qiita.com/Latte72R" target="_blank" legacyBehavior>
-                        <a className="sns-menu">
+                    <Link href="https://qiita.com/Latte72R" legacyBehavior>
+                        <a className="sns-menu" target="_blank">
                             <Image id="qiita-menu" src={QiitaIconWhite} alt="Q" priority={false} />
                         </a>
                     </Link>
