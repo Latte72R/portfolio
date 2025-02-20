@@ -3,6 +3,7 @@ import "@/app/styles/doctheme.css";
 
 import React from 'react';
 import { ReactNode } from 'react';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 type RootLayoutProps = {
     children: ReactNode;
@@ -44,7 +45,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
                 <meta name="twitter:creator" content="@Latte72R" />
                 <meta name="twitter:image" content="https://latte72.net/latte_space.png" />
             </head>
-            <body>{children}</body>
+            <body>
+                <SpeedInsights />
+                {children}
+            </body>
         </html >
     )
 }

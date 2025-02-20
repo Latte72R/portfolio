@@ -79,7 +79,7 @@ h3 {
 .not-found-h1 {
     font-size: 3em;
     color: #E0E0E0;
-    margin-top: 1.6em;
+    margin: 1.6em;
 }
 
 .page-top {
@@ -89,33 +89,36 @@ h3 {
 .latte-image {
     border-radius: 50%;
     border: 0.2em solid #E0E0E0;
-    animation: spin-img 5s linear infinite;
+    animation: spin-logo-img 8s linear infinite;
 }
 
-@keyframes spin-img{
+@keyframes spin-logo-img{
     0%{
       transform: rotate(0deg);
     }
-    80%{
+    20%{
       transform: rotate(0deg);
     }
-    82%{
+    21.5%{
       transform: rotate(20deg);
     }
-    84%{
+    23%{
       transform: rotate(60deg);
     }
-    86%{
+    24.5%{
       transform: rotate(120deg);
     }
-    92%{
+    29%{
       transform: rotate(330deg);
     }
-    94%{
+    30.5%{
       transform: rotate(375deg);
     }
-    97%{
+    32%{
       transform: rotate(350deg);
+    }
+    33.5%{
+      transform: rotate(360deg);
     }
     100%{
       transform: rotate(360deg);
@@ -151,6 +154,90 @@ h3 {
 .link-button:hover {
     color: #00c0f0;
     border: 0.05em solid #00c0f0;
+}
+
+.button1 {
+    animation: spin-button1 8s linear infinite;
+}
+
+.button2 {
+    animation: spin-button2 8s linear infinite;
+}
+
+.button3 {
+    animation: spin-button3 8s linear infinite;
+}
+
+@keyframes spin-button1{
+    0%{
+      transform: rotate(0deg);
+    }
+    60%{
+      transform: rotate(0deg);
+    }
+    60.75%{
+      transform: rotate(10deg);
+    }
+    62.25%{
+      transform: rotate(-10deg);
+    }
+    63.75%{
+      transform: rotate(10deg);
+    }
+    64.5%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(0deg);
+    }
+}
+
+@keyframes spin-button2{
+    0%{
+      transform: rotate(0deg);
+    }
+    75%{
+      transform: rotate(0deg);
+    }
+    75.75%{
+      transform: rotate(-10deg);
+    }
+    77.25%{
+      transform: rotate(10deg);
+    }
+    78.75%{
+      transform: rotate(-10deg);
+    }
+    79.5%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(0deg);
+    }
+}
+
+@keyframes spin-button3{
+    0%{
+      transform: rotate(0deg);
+    }
+    90%{
+      transform: rotate(0deg);
+    }
+    90.75%{
+      transform: rotate(10deg);
+    }
+    92.25%{
+      transform: rotate(-10deg);
+    }
+    93.75%{
+      transform: rotate(10deg);
+    }
+    94.5%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(0deg);
+    }
 }
 
 @media (max-width: 1023px) {

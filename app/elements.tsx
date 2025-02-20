@@ -71,9 +71,9 @@ const Footer = () => {
 const PageLinks = () => {
     return (
         <div className='link-button-div'>
-            <Link href="/about" legacyBehavior><button className="link-button">About</button></Link>
-            <Link href="/works" legacyBehavior><button className="link-button">Works</button></Link>
-            <Link href="/blog" legacyBehavior><button className="link-button">Blog</button></Link>
+            <Link href="/about" legacyBehavior><button className="link-button button1">About</button></Link>
+            <Link href="/works" legacyBehavior><button className="link-button button2">Works</button></Link>
+            <Link href="/blog" legacyBehavior><button className="link-button button3">Blog</button></Link>
         </div>
     );
 }
