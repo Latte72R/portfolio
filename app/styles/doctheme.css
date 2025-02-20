@@ -96,26 +96,26 @@ h3 {
     0%{
       transform: rotate(0deg);
     }
-    84%{
+    80%{
       transform: rotate(0deg);
     }
+    82%{
+      transform: rotate(20deg);
+    }
+    84%{
+      transform: rotate(60deg);
+    }
     86%{
-      transform: rotate(30deg);
-    }
-    88%{
-      transform: rotate(70deg);
-    }
-    90%{
       transform: rotate(120deg);
     }
-    94%{
-      transform: rotate(240deg);
-    }
-    96%{
-      transform: rotate(290deg);
-    }
-    98%{
+    92%{
       transform: rotate(330deg);
+    }
+    94%{
+      transform: rotate(375deg);
+    }
+    97%{
+      transform: rotate(350deg);
     }
     100%{
       transform: rotate(360deg);
