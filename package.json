@@ -16,16 +16,16 @@
     "link-preview-js": "^3.0.13",
     "next": "^15.1.4",
     "next-sitemap": "^4.2.3",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "@types/jsdom": "^21.1.7",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "15.0.3",
+    "@types/jsdom": "^21",
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "^15",
     "typescript": "^5"
   }
 }
