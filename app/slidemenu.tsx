@@ -12,7 +12,7 @@ import QiitaIconWhite from '@/public/logos/qiita-white-icon.webp';
 
 interface SlideMenuProps {
     isOpen: boolean;
-    sRef: React.RefObject<HTMLDivElement>;
+    sRef: React.RefObject<HTMLDivElement | null>;
 }
 
 const SlideMenu = (props: SlideMenuProps) => {

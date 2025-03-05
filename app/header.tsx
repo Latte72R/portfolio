@@ -8,7 +8,7 @@ import React from 'react';
 import { useEffect, useRef } from 'react';
 
 interface HeaderProps {
-    sRef: React.RefObject<HTMLDivElement>;
+    sRef: React.RefObject<HTMLDivElement | null>;
     setIsOpen: (isOpen: boolean) => void;
     isOpen: boolean;
 }
