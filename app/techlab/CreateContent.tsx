@@ -56,7 +56,7 @@ const ArticleBase = (props: ArticleDataPlus) => {
 const Article: React.FC<{ post: ArticleData }> = ({ post }) => {
     return (
         <ArticleBase post={post}>
-            <Image className="qiita-image" src={post.image} alt="thumbnail" width={1200} height={630} layout="responsive" />
+            <Image className="qiita-image" src={post.image} alt="thumbnail" width={1200} height={630} layout="responsive" priority />
         </ArticleBase>
     );
 }
