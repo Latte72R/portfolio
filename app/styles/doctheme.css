@@ -4,12 +4,14 @@
     font-style: normal;
     font-weight: normal;
     src: url("../fonts/BizinGothicDiscord-Regular.woff2") format("woff2");
+    font-display: swap;
 }
 @font-face {
     font-family: "Bizin Gothic Discord";
     font-style: normal;
     font-weight: bold;
     src: url("../fonts/BizinGothicDiscord-Bold.woff2") format("woff2");
+    font-display: swap;
 }
 
 * {
