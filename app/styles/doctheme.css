@@ -4,7 +4,7 @@
     font-style: normal;
     font-weight: normal;
     src: url("../fonts/BizinGothicDiscord-Regular.woff2") format("woff2");
-    font-display: auto;
+    font-display: swap;
 }
 @font-face {
     font-family: "Bizin Gothic Discord";
