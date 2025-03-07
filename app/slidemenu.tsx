@@ -21,7 +21,7 @@ const SlideMenu = (props: SlideMenuProps) => {
             <p><Link href="/" className="menu-link">Top</Link></p>
             <p><Link href="/about" className="menu-link">About</Link></p>
             <p><Link href="/works" className="menu-link">Works</Link></p>
-            <p><Link href="/blog" className="menu-link">Blog</Link></p>
+            <p><Link href="/techlab" className="menu-link">TechLab</Link></p>
             <div className="divider"></div>
             <p><Link href="https://turtle.latte72.net" className="menu-link" target="_blank">TurtleGraphics</Link></p>
             <p><Link href="https://shilitori.latte72.net" className="menu-link" target="_blank">Shilitori</Link></p>

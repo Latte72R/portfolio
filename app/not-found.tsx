@@ -11,7 +11,7 @@ export const metadata = {
 
 const NotFoundPage: React.FC = () => {
     return (
-        <MainContent page="">
+        <MainContent>
             <div className="not-found">
                 <h1 className="not-found-h1">404 Not Found</h1>
                 <PageLinks />

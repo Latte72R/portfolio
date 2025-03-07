@@ -1,23 +1,23 @@
 
-import '@/app/styles/blog.css'
+import '@/app/styles/techlab.css'
 import MainContent from "../elements";
 import React from 'react';
-import QiitaContent from "./QiitaContent";
+import CreateContent from "./CreateContent";
 
 export const metadata = {
-    title: 'Blog',
+    title: 'TechLab',
     openGraph: {
-        title: 'Blog',
+        title: 'TechLab',
     },
     alternates: {
-        canonical: '/blog',
+        canonical: '/techlab',
     }
 };
 
 const WorksPage: React.FC = () => {
     return (
-        <MainContent page="blog">
-            <QiitaContent />
+        <MainContent>
+            <CreateContent />
         </MainContent>
     );
 }

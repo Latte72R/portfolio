@@ -25,7 +25,7 @@ export const metadata = {
 
 const WorksPage: React.FC = () => {
     return (
-        <MainContent page="works">
+        <MainContent>
             <Document>
                 <section id="turtle-graphics">
                     <h2>Turtle graphics</h2>

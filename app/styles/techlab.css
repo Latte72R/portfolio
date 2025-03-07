@@ -10,6 +10,7 @@
     background-color: rgb(50, 50, 60);
 }
 
+/*
 .qiita-img-loading {
     border-radius: 0.4em;
     border: #E0E0E0 0.2em solid;
@@ -20,6 +21,7 @@
     align-items: center;
     justify-content: center;
 }
+*/
 
 .qiita-img-container {
     margin: 0em;
@@ -29,6 +31,7 @@
     border-radius: 0.4em;
 }
 
+/*
 .qiita-tag-container {
     margin-bottom: 0em;
 }
@@ -40,6 +43,7 @@
     padding: 0.1em 0.4em;
     border-radius: 0.2em;
 }
+*/
 
 .qiita-loading {
     display: flex;
@@ -57,6 +61,34 @@
 
 .qiita-link:hover {
     color: #E0E0E0;
+}
+
+.content-details {
+    display: flex;
+    margin: 1em 0 0 0;
+}
+
+.content-date {
+    margin: 0 auto 0 0;
+}
+
+.content-site {
+    display: flex;
+    align-items: center;
+    margin: auto 0 auto auto;
+    background-color: #E0E0E0;
+    color: #222a2e;
+    font-family: "Arial", "Bizin Gothic Discord";
+    font-weight: bold;
+    border-radius: 0.2em;
+    line-height: 1.4em;
+    padding: 0.2em 0.4em;
+}
+
+.site-logo {
+    width: 1.4em;
+    height: 1.4em;
+    margin: 0 0.4em 0 0;
 }
 
 .loading-anime {

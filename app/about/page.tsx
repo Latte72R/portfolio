@@ -23,7 +23,7 @@ export const metadata = {
 
 const HomePage: React.FC = () => {
     return (
-        <MainContent page="about">
+        <MainContent>
             <Document>
                 <section id="about-me">
                     <h2>About Me</h2>

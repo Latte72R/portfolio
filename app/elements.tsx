@@ -28,12 +28,7 @@ const Particles = () => {
     return <div id="particles-js"></div>;
 }
 
-interface MainContentProps {
-    page: string;
-    children: React.ReactNode;
-}
-
-const MainContent = (props: MainContentProps) => {
+const MainContent = (props: { children: React.ReactNode }) => {
     const [isOpen, setIsOpen] = useState(false);
     const slideRef = useRef<HTMLDivElement | null>(null);
     return (
@@ -73,7 +68,7 @@ const PageLinks = () => {
         <div className='link-button-div'>
             <Link href="/about" legacyBehavior><button className="link-button button1">About</button></Link>
             <Link href="/works" legacyBehavior><button className="link-button button2">Works</button></Link>
-            <Link href="/blog" legacyBehavior><button className="link-button button3">Blog</button></Link>
+            <Link href="/techlab" legacyBehavior><button className="link-button button3">TechLab</button></Link>
         </div>
     );
 }

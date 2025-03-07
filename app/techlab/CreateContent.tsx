@@ -4,27 +4,49 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Document } from '../elements';
-import { ArticleData, getAllPosts, getImgUrl } from './QiitaAPI';
+import { ArticleData, getAllPosts } from './MicroCMSAPI';
+import QiitaLogo from '@/public/logo-color/qiita-icon.webp';
+import SpeakerDeckLogo from '@/public/logo-color/speakerdeck-icon.webp';
 
 export interface ArticleDataPlus {
     post: ArticleData;
     children: React.ReactNode;
 }
 
+const ContentSite: React.FC<{ site: string }> = ({ site }) => {
+    switch (site) {
+        case "Qiita":
+            return (
+                <span className="content-site">
+                    <Image className="site-logo" src={QiitaLogo} alt="Q" priority />Qiita
+                </span>);
+        case "SpeakerDeck":
+            return (
+                <span className="content-site">
+                    <Image className="site-logo" src={SpeakerDeckLogo} alt="Q" priority />SpeakerDeck
+                </span>);
+        default:
+            return (
+                <span className="content-site">
+                    {site}
+                </span>);
+    }
+}
+
 const ArticleBase = (props: ArticleDataPlus) => {
     const { post, children } = props;
     return (
         <Document>
-            <Link href={post.url} target="_blank" className="qiita-link">
+            <Link href={post.link} target="_blank" className="qiita-link">
                 <div className="qiita-article">
                     <div className="qiita-img-container">
                         {children}
                     </div>
                     <h3 className="qiita-title">{post.title}</h3>
-                    <p className="qiita-date">{post.date.replace(/(\d{4})-(\d{2})-(\d{2})T.*/, "$1/$2/$3")}</p>
-                    <p className="qiita-tag-container">{post.tags.map((tag, index) => (
-                        <span className="qiita-tag" key={index}>{tag}</span>
-                    ))}</p>
+                    <div className="content-details">
+                        <span className="content-date">{post.date.replace(/(\d{4})-(\d{2})-(\d{2})T.*/, "$1/$2/$3")}</span>
+                        <ContentSite site={post.site} />
+                    </div>
                 </div>
             </Link>
         </Document>
@@ -32,52 +54,14 @@ const ArticleBase = (props: ArticleDataPlus) => {
 };
 
 const Article: React.FC<{ post: ArticleData }> = ({ post }) => {
-    const [imageUrl, setUrl] = React.useState<string | null>();
-    const [isLoading, setIsLoading] = React.useState(true);
-    const postUrl = post.url;
-
-    React.useEffect(() => {
-        const fetchData = async () => {
-            setIsLoading(true);
-            try {
-                setUrl(await getImgUrl(postUrl));
-            } catch {
-                setUrl(null);
-            } finally {
-                setIsLoading(false);
-            }
-        };
-        fetchData();
-    }, [postUrl]);
-
-    if (isLoading) {
-        return (
-            <ArticleBase post={post}>
-                <div className="qiita-img-loading">
-                    <div className="loading-anime"></div>
-                    <h3>Now loading...</h3>
-                </div>
-            </ArticleBase>
-
-        );
-    } else if (!imageUrl) {
-        return (
-            <ArticleBase post={post}>
-                <div className="qiita-img-loading">
-                    <h3>No image available.</h3>
-                </div>
-            </ArticleBase>
-        );
-    } else {
-        return (
-            <ArticleBase post={post}>
-                <Image className="qiita-image" src={imageUrl} alt="thumbnail" width={1200} height={630} layout="responsive" />
-            </ArticleBase>
-        );
-    };
+    return (
+        <ArticleBase post={post}>
+            <Image className="qiita-image" src={post.image} alt="thumbnail" width={1200} height={630} layout="responsive" />
+        </ArticleBase>
+    );
 }
 
-const QiitaContent: React.FC = () => {
+const CreateContent: React.FC = () => {
     const [posts, setPosts] = React.useState<ArticleData[] | null>(null);
     const [isLoading, setIsLoading] = React.useState(true);
 
@@ -129,4 +113,4 @@ const QiitaContent: React.FC = () => {
     }
 };
 
-export default QiitaContent;
+export default CreateContent;

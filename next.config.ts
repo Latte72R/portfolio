@@ -2,12 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'qiita-user-contents.imgix.net'
-      }
-    ]
+    domains: ['qiita-user-contents.imgix.net', 'images.microcms-assets.io'],
   },
   reactStrictMode: true,
 };

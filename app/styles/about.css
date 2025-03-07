@@ -55,8 +55,6 @@
 
 .sns-link:hover {
     display: flex;
-    gap: 0.2em;
-    font-weight: bold;
     background-color: #18282a;
     color: #00c0f0;
 }
