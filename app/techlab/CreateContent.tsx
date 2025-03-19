@@ -18,12 +18,12 @@ const ContentSite: React.FC<{ site: string }> = ({ site }) => {
         case "Qiita":
             return (
                 <span className="content-site">
-                    <Image className="site-logo" src={QiitaLogo} alt="Q" priority />Qiita
+                    <Image className="site-logo" src={QiitaLogo} alt="" priority />Qiita
                 </span>);
         case "SpeakerDeck":
             return (
                 <span className="content-site">
-                    <Image className="site-logo" src={SpeakerDeckLogo} alt="Q" priority />SpeakerDeck
+                    <Image className="site-logo" src={SpeakerDeckLogo} alt="" priority />SpeakerDeck
                 </span>);
         default:
             return (
@@ -31,6 +31,14 @@ const ContentSite: React.FC<{ site: string }> = ({ site }) => {
                     {site}
                 </span>);
     }
+}
+
+const ConvertJST = (date: string) => {
+    const time: Date = new Date(date);
+    return time.toLocaleDateString("ja-JP", {
+        year: "numeric", month: "2-digit",
+        day: "2-digit"
+    }).replaceAll('/', '-');
 }
 
 const ArticleBase = (props: ArticleDataPlus) => {
@@ -44,7 +52,7 @@ const ArticleBase = (props: ArticleDataPlus) => {
                     </div>
                     <h3 className="qiita-title">{post.title}</h3>
                     <div className="content-details">
-                        <span className="content-date">{post.date.replace(/(\d{4})-(\d{2})-(\d{2})T.*/, "$1/$2/$3")}</span>
+                        <span className="content-date">{ConvertJST(post.date)}</span>
                         <ContentSite site={post.site} />
                     </div>
                 </div>
