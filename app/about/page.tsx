@@ -27,11 +27,11 @@ const HomePage: React.FC = () => {
             <Document>
                 <section id="about-me">
                     <h2>About Me</h2>
-                    <h3>はじめまして、Latte72 です。</h3>
-                    <p>主に Python、C/C++、JavaScript を使って開発しています。</p>
-                    <p>最近は低レイヤー開発（特に自作OSや自作コンパイラの開発）に興味があります。</p>
+                    <h3>はじめまして，Latte72 です．</h3>
+                    <p>主に Python，C/C++，JavaScript を使って開発しています．</p>
+                    <p>最近は低レイヤー開発（特に自作OSや自作コンパイラの開発）に興味があります．</p>
                     <h3>所属</h3>
-                    <p>慶應義塾大学理工学部</p>
+                    <p>慶應義塾大学理工学部情報工学科</p>
                     <p>慶應義塾大学公認サークル Computer Society</p>
                     <h3>SNS Links</h3>
                     <span className="sns-link-span">
@@ -68,10 +68,10 @@ const HomePage: React.FC = () => {
             </Document>
             <Document>
                 <h2>Contacts</h2>
-                <p>メールでのお問い合わせは以下のアドレスまでお願いします。</p>
+                <p>メールでのお問い合わせは以下のアドレスまでお願いします．</p>
                 <p><Image id="mail-address" src={MailAddressImage} alt="address" priority /></p>
-                <p>※ 特定電子メールの送付はお断りします。</p>
-                <p>X (@Latte72R) の DirectMessage への連絡も受け付けています。</p>
+                <p>※ 特定電子メールの送付はお断りします．</p>
+                <p>X (@Latte72R) の DirectMessage への連絡も受け付けています．</p>
             </Document>
         </MainContent>
     );

@@ -1,5 +1,5 @@
 
-import "@/app/styles/doctheme.css";
+import "@/app/styles/main.css";
 
 import React from 'react';
 import { ReactNode } from 'react';
