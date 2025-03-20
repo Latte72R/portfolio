@@ -38,7 +38,7 @@ const ConvertJST = (date: string) => {
     return time.toLocaleDateString("ja-JP", {
         year: "numeric", month: "2-digit",
         day: "2-digit"
-    }).replaceAll('/', '-');
+    });
 }
 
 const ArticleBase = (props: ArticleDataPlus) => {
