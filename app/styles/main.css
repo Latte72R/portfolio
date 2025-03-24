@@ -72,6 +72,8 @@ h3 {
     border-radius: 0.6em;
     background-color: rgba(0, 0, 0, 0.8);
     box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(0.1em);          /* ぼかし効果 */
+    -webkit-backdrop-filter: blur(0.1em);  /* Safari向け */
 }
 
 .not-found {
@@ -128,7 +130,6 @@ h3 {
 }
 
 .title-top {
-    color: #E0E0E0;
     text-align: center;
     margin-top: 0;
     margin-bottom: 0.6em;
@@ -142,7 +143,9 @@ h3 {
 .link-button {
     font-size: 1.8em;
     color: #E0E0E0;
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(0.05em);          /* ぼかし効果 */
+    -webkit-backdrop-filter: blur(0.05em);  /* Safari向け */
     text-decoration: none;
     height: 1.8em;
     width: 5.4em;

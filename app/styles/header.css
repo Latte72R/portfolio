@@ -36,6 +36,8 @@
     top: 5em;
     margin-top: 1em;
     background-color: rgba(30, 30, 30, 0.9);
+    backdrop-filter: blur(0.05em);          /* ぼかし効果 */
+    -webkit-backdrop-filter: blur(0.05em);  /* Safari向け */
     border: 0.1em solid rgba(20, 20, 20, 0.8);
     color: #E0E0E0;
     border-radius: 0.6em;
@@ -84,6 +86,8 @@
     top: 0;
     left: 0;
     background-color: rgba(30, 30, 30, 0.9);
+    backdrop-filter: blur(0.05em);          /* ぼかし効果 */
+    -webkit-backdrop-filter: blur(0.05em);  /* Safari向け */
     border-bottom: 0.1em solid rgba(20, 20, 20, 0.8);
     box-shadow: 0 0.2em 0.4em rgba(10, 10, 10, 0.8);
     position: fixed;
