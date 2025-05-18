@@ -1,0 +1,24 @@
+
+.document {
+    border-radius: 0.6em;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(0.1em);          /* ぼかし効果 */
+    -webkit-backdrop-filter: blur(0.1em);  /* Safari向け */
+}
+
+
+@media (max-width: 1023px) {
+    .document {
+        margin: 1.6em 0.4em;
+        padding: 1em 2em;
+    }
+}
+
+@media (min-width: 1024px) {
+    .document {
+        width: 60em;
+        margin: 2em auto;
+        padding: 2em 4em;
+    }
+}

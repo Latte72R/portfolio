@@ -1,6 +1,9 @@
 
+import styles from '@/app/styles/topPage.module.css';
+
 import React from 'react';
-import MainContent, { PageLinks } from "./elements";
+import MainContent from "@/app/components/mainContent";
+import PageLinks from "@/app/components/pageLinks";
 
 export const metadata = {
     title: 'Not Found',
@@ -12,8 +15,8 @@ export const metadata = {
 const NotFoundPage: React.FC = () => {
     return (
         <MainContent>
-            <div className="not-found">
-                <h1 className="not-found-h1">404 Not Found</h1>
+            <div className={styles.notFound}>
+                <h1 className={styles.notFoundH1}>404 Not Found</h1>
                 <PageLinks />
             </div>
         </MainContent>

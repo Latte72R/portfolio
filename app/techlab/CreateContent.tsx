@@ -1,9 +1,10 @@
 'use client';
 
+import styles from '@/app/styles/techlab.module.css'
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Document } from '../elements';
+import Document from '@/app/components/document';
 import { ArticleData, getAllPosts } from './MicroCMSAPI';
 import QiitaLogo from '@/public/logo-color/qiita-icon.webp';
 import SpeakerDeckLogo from '@/public/logo-color/speakerdeck-icon.webp';
@@ -17,17 +18,17 @@ const ContentSite: React.FC<{ site: string }> = ({ site }) => {
     switch (site) {
         case "Qiita":
             return (
-                <span className="content-site">
-                    <Image className="site-logo" src={QiitaLogo} alt="" priority />Qiita
+                <span className={styles.contentSite}>
+                    <Image className={styles.siteLogo} src={QiitaLogo} alt="" priority />Qiita
                 </span>);
         case "SpeakerDeck":
             return (
-                <span className="content-site">
-                    <Image className="site-logo" src={SpeakerDeckLogo} alt="" priority />SpeakerDeck
+                <span className={styles.contentSite}>
+                    <Image className={styles.siteLogo} src={SpeakerDeckLogo} alt="" priority />SpeakerDeck
                 </span>);
         default:
             return (
-                <span className="content-site">
+                <span className={styles.contentSite}>
                     {site}
                 </span>);
     }
@@ -45,14 +46,14 @@ const ArticleBase = (props: ArticleDataPlus) => {
     const { post, children } = props;
     return (
         <Document>
-            <Link href={post.link} target="_blank" className="qiita-link">
-                <div className="qiita-article">
-                    <div className="qiita-img-container">
+            <Link href={post.link} target="_blank" className={styles.contentLink}>
+                <div className={styles.contentArticle}>
+                    <div className={styles.contentImageContainer}>
                         {children}
                     </div>
-                    <h3 className="qiita-title">{post.title}</h3>
-                    <div className="content-details">
-                        <span className="content-date">{ConvertJST(post.date)}</span>
+                    <h3 className={styles.contentTitle}>{post.title}</h3>
+                    <div className={styles.contentDetails}>
+                        <span className={styles.contentDate}>{ConvertJST(post.date)}</span>
                         <ContentSite site={post.site} />
                     </div>
                 </div>
@@ -64,7 +65,7 @@ const ArticleBase = (props: ArticleDataPlus) => {
 const Article: React.FC<{ post: ArticleData }> = ({ post }) => {
     return (
         <ArticleBase post={post}>
-            <Image className="qiita-image" src={post.image} alt="thumbnail" width={1200} height={630} layout="responsive" />
+            <Image className={styles.contentImage} src={post.image} alt="thumbnail" width={1200} height={630} layout="responsive" />
         </ArticleBase>
     );
 }
@@ -98,8 +99,8 @@ const CreateContent: React.FC = () => {
     if (isLoading) {
         return (
             <Document>
-                <div className="qiita-loading">
-                    <div className="loading-anime"></div>
+                <div className={styles.contentLoading}>
+                    <div className={styles.loadingAnime}></div>
                     <h3>Now loading...</h3>
                 </div>
             </Document>

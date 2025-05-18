@@ -1,13 +1,14 @@
 
-import "@/app/styles/about.css";
+import styles from "@/app/styles/about.module.css";
 
-import MainContent, { Document } from '../elements';
+import MainContent from '@/app/\components/mainContent';
+import Document from "@/app/components/document";
 import React from 'react';
 import Image from 'next/image';
 
 import GitHubLogoWhite from '@/public/logos/github-mark-white.webp';
 import XLogoWhite from '@/public/logos/x-logo-white.webp';
-import QiitaIconWhite from '@/public/logos/qiita-white-icon.webp';
+import QiitaLogoWhite from '@/public/logos/qiita-white-icon.webp';
 
 import MailAddressImage from '@/public/mail-adress.webp';
 
@@ -25,31 +26,29 @@ const HomePage: React.FC = () => {
     return (
         <MainContent>
             <Document>
-                <section id="about-me">
-                    <h2>About Me</h2>
-                    <h3>はじめまして，Latte72 です．</h3>
-                    <p>主に Python，C/C++，JavaScript を使って開発しています．</p>
-                    <p>最近は低レイヤー開発（特に自作OSや自作コンパイラの開発）に興味があります．</p>
-                    <h3>所属</h3>
-                    <p>慶應義塾大学理工学部情報工学科</p>
-                    <p>慶應義塾大学公認サークル Computer Society</p>
-                    <h3>SNS Links</h3>
-                    <span className="sns-link-span">
-                        <a href="https://github.com/Latte72R" className="sns-link" target="_blank">
-                            <Image id="github-logo-white" src={GitHubLogoWhite} alt="G" priority />
-                            @Latte72R</a>
-                    </span>
-                    <span className="sns-link-span">
-                        <a href="https://x.com/Latte72R" className="sns-link" target="_blank">
-                            <Image id="x-logo-white" src={XLogoWhite} alt="X" priority />
-                            @Latte72R</a>
-                    </span>
-                    <span className="sns-link-span">
-                        <a href="https://qiita.com/Latte72R" className="sns-link" target="_blank">
-                            <Image id="qiita-icon-white" src={QiitaIconWhite} alt="Q" priority />
-                            @Latte72R</a>
-                    </span>
-                </section>
+                <h2>About Me</h2>
+                <h3>はじめまして，Latte72 です．</h3>
+                <p>主に Python，C/C++，JavaScript を使って開発しています．</p>
+                <p>最近は低レイヤー開発（特に自作OSや自作コンパイラの開発）に興味があります．</p>
+                <h3>所属</h3>
+                <p>慶應義塾大学理工学部情報工学科</p>
+                <p>慶應義塾大学公認サークル Computer Society</p>
+                <h3>SNS Links</h3>
+                <span className={styles.snsLinkSpan}>
+                    <a href="https://github.com/Latte72R" className={styles.snsLink} target="_blank">
+                        <Image id={styles.githubLogoWhite} src={GitHubLogoWhite} alt="G" priority />
+                        @Latte72R</a>
+                </span>
+                <span className={styles.snsLinkSpan}>
+                    <a href="https://x.com/Latte72R" className={styles.snsLink} target="_blank">
+                        <Image id={styles.xLogoWhite} src={XLogoWhite} alt="X" priority />
+                        @Latte72R</a>
+                </span>
+                <span className={styles.snsLinkSpan}>
+                    <a href="https://qiita.com/Latte72R" className={styles.snsLink} target="_blank">
+                        <Image id={styles.qiitaLogoWhite} src={QiitaLogoWhite} alt="Q" priority />
+                        @Latte72R</a>
+                </span>
             </Document>
             <Document>
                 <h2>Skills</h2>
@@ -70,7 +69,7 @@ const HomePage: React.FC = () => {
             <Document>
                 <h2>Contacts</h2>
                 <p>メールでのお問い合わせは以下のアドレスまでお願いします．</p>
-                <p><Image id="mail-address" src={MailAddressImage} alt="address" priority /></p>
+                <p><Image id={styles.mailAddress} src={MailAddressImage} alt="address" priority /></p>
                 <p>※ 特定電子メールの送付はお断りします．</p>
                 <p>X (@Latte72R) の DirectMessage への連絡も受け付けています．</p>
             </Document>

@@ -1,5 +1,5 @@
 
-#github-logo-white {
+#githubLogoWhite {
     width: 1.4em;
     height: 1.4em;
     display: inline-block;
@@ -8,7 +8,7 @@
     margin: auto;
 }
 
-#x-logo-white {
+#xLogoWhite {
     width: 1.2em;
     height: 1.2em;
     padding: 0.1em 0em;
@@ -18,7 +18,7 @@
     margin: auto;
 }
 
-#qiita-icon-white {
+#qiitaLogoWhite {
     width: 1.4em;
     height: 1.4em;
     display: inline-block;
@@ -27,7 +27,7 @@
     margin: auto;
 }
 
-#mail-address {
+#mailAddress {
     width: auto;
     height: 4.2em;
     display: inline-block;
@@ -36,11 +36,11 @@
     margin: auto;
 }
 
-.sns-link-span {
+.snsLinkSpan {
     display: inline-block;
 }
 
-.sns-link {
+.snsLink {
     display: flex;
     gap: 0.2em;
     font-weight: bold;
@@ -53,7 +53,7 @@
     transition: all 0.3s 0s ease;
 }
 
-.sns-link:hover {
+.snsLink:hover {
     display: flex;
     background-color: #18282a;
     color: #00c0f0;

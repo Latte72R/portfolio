@@ -14,19 +14,19 @@
     transform-origin: 250px 250px;
 }
 
-.hamburgerMenu .open .border {
+.hamburgerMenu.open .border {
     fill: #00c0f0;
 }
 
-.hamburgerMenu .open .border1 {
+.hamburgerMenu.open .border1 {
     transform: translate(-102px, 102px) rotate(45deg);
 }
 
-.hamburgerMenu .open .border2 {
+.hamburgerMenu.open .border2 {
     opacity: 0;
 }
   
-.hamburgerMenu .open .border3 {
+.hamburgerMenu.open .border3 {
     transform: translate(-102px, -102px) rotate(-45deg);
 }
 

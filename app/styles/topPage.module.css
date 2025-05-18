@@ -1,0 +1,224 @@
+
+.pageTop {
+    text-align: center;
+}
+
+.latteImage {
+    border-radius: 50%;
+    border: 0.2em solid #E0E0E0;
+    animation: spin-logo-img 8s linear infinite;
+}
+
+.notFound {
+    text-align: center;
+}
+
+.notFoundH1 {
+    font-size: 3em;
+    color: #E0E0E0;
+    margin: 1.6em auto;
+}
+
+.titleTop {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0.6em;
+    cursor: default;
+}
+
+.linkButtonDiv {
+    justify-content: center;
+}
+
+.linkButton {
+    font-size: 1.8em;
+    color: #E0E0E0;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(0.05em);          /* ぼかし効果 */
+    -webkit-backdrop-filter: blur(0.05em);  /* Safari向け */
+    text-decoration: none;
+    height: 1.8em;
+    width: 5.4em;
+    border-radius: 0.3em;
+    margin: 0.25em 0.6em;
+    cursor: pointer;
+    border: 0.05em solid #E0E0E0;
+    transition: all 0.3s 0s ease;
+}
+
+.linkButton:hover {
+    color: #00c0f0;
+    border: 0.05em solid #00c0f0;
+}
+
+.button1 {
+    animation: spinButton1 8s linear infinite;
+}
+
+.button2 {
+    animation: spinButton2 8s linear infinite;
+}
+
+.button3 {
+    animation: spinButton3 8s linear infinite;
+}
+
+@keyframes spin-logo-img{
+    0%{
+      transform: rotate(0deg);
+    }
+    20%{
+      transform: rotate(0deg);
+    }
+    21.5%{
+      transform: rotate(20deg);
+    }
+    23%{
+      transform: rotate(60deg);
+    }
+    24.5%{
+      transform: rotate(120deg);
+    }
+    29%{
+      transform: rotate(330deg);
+    }
+    30.5%{
+      transform: rotate(375deg);
+    }
+    32%{
+      transform: rotate(350deg);
+    }
+    33.5%{
+      transform: rotate(360deg);
+    }
+    100%{
+      transform: rotate(360deg);
+    }
+}
+
+@keyframes spinButton1{
+    0%{
+      transform: rotate(0deg);
+    }
+    60%{
+      transform: rotate(0deg);
+    }
+    60.75%{
+      transform: rotate(6deg);
+    }
+    62.25%{
+      transform: rotate(-6deg);
+    }
+    63.75%{
+      transform: rotate(6deg);
+    }
+    64.5%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(0deg);
+    }
+}
+
+@keyframes spinButton2{
+    0%{
+      transform: rotate(0deg);
+    }
+    75%{
+      transform: rotate(0deg);
+    }
+    75.75%{
+      transform: rotate(6deg);
+    }
+    77.25%{
+      transform: rotate(-6deg);
+    }
+    78.75%{
+      transform: rotate(6deg);
+    }
+    79.5%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(0deg);
+    }
+}
+
+@keyframes spinButton3{
+    0%{
+      transform: rotate(0deg);
+    }
+    90%{
+      transform: rotate(0deg);
+    }
+    90.75%{
+      transform: rotate(6deg);
+    }
+    92.25%{
+      transform: rotate(-6deg);
+    }
+    93.75%{
+      transform: rotate(6deg);
+    }
+    94.5%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(0deg);
+    }
+}
+
+@media (max-width: 1023px) {
+    .notFound {
+        margin: 7em auto;
+    }
+
+    .linkButtonDiv {
+        align-items: center;
+        display: flex;
+        flex-flow: column;
+    }
+
+    .linkButton {
+        width: 7em;
+    }
+
+    .pageTop {
+        margin-top: 3em;
+        margin-bottom: 3em;
+    }
+    
+    .latteImage {
+        width: 14em;
+        height: auto;
+    }
+    
+    .titleTop {
+        font-size: 2.8em;
+    }
+}
+
+@media (min-width: 1024px) {
+    .notFound {
+        margin-top: 14em;
+        margin-bottom: 14em;
+    }
+
+    .linkButtonDiv {
+        display: block;
+    }
+
+    .pageTop {
+        margin-top: 4em;
+        margin-bottom: 8em;
+    }
+    
+    .latteImage {
+        width: 16em;
+        height: auto;
+    }
+    
+    .titleTop {
+        font-size: 3em;
+    }
+}

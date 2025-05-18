@@ -1,6 +1,5 @@
 
-import '@/app/styles/techlab.css'
-import MainContent from "../elements";
+import MainContent from "@/app/components/mainContent";
 import React from 'react';
 import CreateContent from "./CreateContent";
 
