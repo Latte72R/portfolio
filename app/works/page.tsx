@@ -8,6 +8,7 @@ import Image from 'next/image';
 
 import PortfolioImage from "@/public/image/portfolio.webp";
 import TurtleImage from "@/public/image/turtle.webp";
+import LaCCImage from "@/public/image/lacc.webp";
 import ShilitoriImage from "@/public/image/shilitori.webp";
 import EasyTurtleImage from "@/public/image/easyturtle.webp";
 import LsbImage from "@/public/image/lsb.webp";
@@ -35,6 +36,15 @@ const WorksPage: React.FC = () => {
                     <p>Turtle graphics は，教育現場で教師がプログラミングの基礎を教えるために作られたツールです．</p>
                     <p>このサイトでは，JavaScript を使ってウェブブラウザから簡単に Turtle Graphics を体験できるようにアレンジしました．</p>
                     <p>ユーザーはシンプルなコマンドを入力するだけで，Turtle に指示を与え，さまざまな図形を描かせることができます．</p>
+                </section>
+            </Document>
+            <Document>
+                <section id="lacc">
+                    <h2>LaCC</h2>
+                    <p><Image id="image-lacc" className="works-image" src={LaCCImage} alt="LaCC Image" /></p>
+                    <p>GitHub：<Link href="https://github.com/latte72r/LaCC/" target="_blank">https://github.com/latte72r/LaCC/</Link></p>
+                    <p>LaCC は, C コンパイラの仕様やメモリ構造の理解を目的として開発されました.</p>
+                    <p>必要最小限のコア機能だけを実装したシンプルな C コンパイラです.</p>
                 </section>
             </Document>
             <Document>

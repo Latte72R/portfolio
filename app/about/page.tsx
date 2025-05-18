@@ -54,7 +54,8 @@ const HomePage: React.FC = () => {
             <Document>
                 <h2>Skills</h2>
                 <p>Python / C / C++</p>
-                <p>HTML / CSS / JavaScript</p>
+                <p>HTML / CSS</p>
+                <p>JavaScript/ TypeScript</p>
                 <p>React / Next.js</p>
                 <p>x86-64 Assembly</p>
                 <p>Visual Basic for Applications</p>

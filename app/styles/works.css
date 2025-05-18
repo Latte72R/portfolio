@@ -10,6 +10,11 @@
         width: auto;
     }
 
+    #image-lacc {
+        height: 12em;
+        width: auto;
+    }
+
     #image-turtle {
         height: 14em;
         width: auto;
@@ -38,6 +43,11 @@
 
 @media (min-width: 1024px) {
     #image-portfolio {
+        height: 26em;
+        width: auto;
+    }
+
+    #image-lacc {
         height: 26em;
         width: auto;
     }
